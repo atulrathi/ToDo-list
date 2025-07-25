@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Todo List App</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="container">
+    <h1>📝 Todo List</h1>
+
+    <div class="filters">
+      <input type="text" id="searchInput" placeholder="🔍 Search tasks" />
+      <input type="date" id="fromDate" />
+      <input type="date" id="toDate" />
+    </div>
+
+    <form id="todoForm">
+      <input type="text" id="todoTitle" placeholder="✏️ Add new todo" required />
+      <button type="submit">➕ Add</button>
+    </form>
+
+    <div id="loading" class="loading">Loading...</div>
+
+    <ul id="todoList" class="todo-list"></ul>
+
+    <div id="pagination" class="pagination"></div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"
+    integrity="sha512-NcZdtrT77bJr4STcmsGAESr06BYGE8woZdSdEgqnpyqac7sugNO+Tr4bGwGF3MsnEkGKhU2KL2xh6Ec+BqsaHA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="app.js"></script>
+</body>
+
+</html>
