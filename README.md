@@ -24,9 +24,4 @@ Just open `index.html` in any browser.
 - LocalStorage persistence
 - Clean UI with animations
 
-## 🔗 Live Demo
-👉 [Click here to view](https://atulrathi.github.io/todo-app/)
-
----
-
 Made with ❤️ by [Atul Rathi](https://github.com/atulrathi)
