@@ -22,9 +22,7 @@ let allTodos = [];
 let currentPage = 1;
 const TODOS_PER_PAGE = 10;
 
-function savetolocalstorage() {
-  localStorage.setItem('todos', JSON.stringify(allTodos));
-}
+
 
 function showLoading() {
   loading.style.display = 'block';
@@ -40,8 +38,6 @@ async function fetchTodos() {
     const res = await fetch(API_URL);
     const data = await res.json();
     allTodos = data.todos;
-    const stored = localStorage.getItem('todos');
-    allTodos = stored ? JSON.parse(stored) : [];
     renderTodos();
     setupPagination();
   } catch (err) {
@@ -111,7 +107,6 @@ todoForm.addEventListener('submit', async (e) => {
     const newTodo = await res.json();
     allTodos.unshift(newTodo);
     todoTitle.value = '';
-    savetolocalstorage()
     renderTodos();
     setupPagination();
   } catch (err) {
